@@ -1,6 +1,5 @@
-const exit = @import("./syscalls.zig").exit;
-const printnf = @import("./myprint.zig").printer.printnf;
-const printf = @import("./myprint.zig").printer.printf;
+const exit = @import("./arch/x86/syscalls.zig").exit;
+const printf = @import("./io/print/myprint.zig").Printer.printf;
 
 export fn _start() usize {
     main();
@@ -8,10 +7,8 @@ export fn _start() usize {
 }
 
 pub fn main() void {
-    printnf("Hey how are you\n");
-    printnf("Hey not bad, what about you?\n");
-    printf("What is up {}\n {} {}", .{ "hellow", "some long thing but shoudl be ok", "blalalalalalala" });
-
-    const hey = "A" ** 4098;
-    printnf(hey);
+    const thing = "qweqwe";
+    const thing2 = "whataataddda";
+    const arr: [2][:0]const u8 = .{ thing, thing2 };
+    printf("{} {} {}\n", .{ 1234, "another", arr });
 }
