@@ -1,5 +1,5 @@
 const exit = @import("./arch/x86/syscalls.zig").exit;
-const printf = @import("./io/print/myprint.zig").Printer.printf;
+const printf = @import("./io/print/print.zig").Printer.printf;
 
 export fn _start() usize {
     main();
