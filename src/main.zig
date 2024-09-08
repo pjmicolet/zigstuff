@@ -10,5 +10,5 @@ pub fn main() void {
     const thing = "qweqwe";
     const thing2 = "whataataddda";
     const arr: [2][:0]const u8 = .{ thing, thing2 };
-    printf("{} {} {}\n", .{ 1234, "another", arr });
+    printf("{}, {} {}\n", .{ 1234, "another", arr });
 }

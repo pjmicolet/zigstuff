@@ -1,4 +1,4 @@
-const AnyPrinter = struct {
+pub const AnyPrinter = struct {
     pub fn convertAny(value: anytype, outputbuff: anytype) void {
         switch (@typeInfo(@TypeOf(value))) {
             .Int, .ComptimeInt => {
